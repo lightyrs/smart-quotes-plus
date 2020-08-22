@@ -12,27 +12,16 @@ Input Markup|Character Name|Output Unicode Char|Notes
 :-------:|:-------:|:-------:|-------
 `"`|double quote|`“` or `”`|figures out which to use based on context
 `'`|single quote|`‘` or `’`|figures out which to use based on context
- 
-#### Other replacements:
 
-Input Markup|Character Name|Output Unicode Char|Notes
-:-------:|:-------:|:-------:|-------
-`'`|apostrophe|`’`|for contractions, only invoked when surrounded by letters
-`--`|en dash|`–`| only when \-\- are surrounded by numbers
-`---`|em dash|`—`|only when \-\-\- are surrounded by letters
-`(C)`| copyright|`©`| 
-`(R)`|registered|`®`|
-`(TM)`|trademark|`™`|
-`...`|ellipsis|`…`| 
 
-There are a few other special apostrophe cases like `’tis` or `’70s` where the closing quote is the appropriate character even though it is at the beginning of a word, so an exception is made for those situations. 
+There are a few other special apostrophe cases like `’tis` or `’70s` where the closing quote is the appropriate character even though it is at the beginning of a word, so an exception is made for those situations.
 
 #### Example
 
 This:
 
-`"'This' is 'a' 'test'". "This" isn't. (R) (C) (TM) 1--2 Em---dash 'tis 'twas, in the '70s`
+`"'This' is 'a' 'test'". "This" isn't. 'tis 'twas, in the '70s`
 
 yields this:
 
-`“‘This’ is ‘a’ ‘test’”. “This” isn’t. ® © ™ 1–2 Em—dash ’tis ’twas, in the ’70s`
+`“‘This’ is ‘a’ ‘test’”. “This” isn’t. ’tis ’twas, in the ’70s`
